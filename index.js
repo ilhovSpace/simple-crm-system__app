@@ -1,10 +1,5 @@
-const express = require('express')
+const app = require('./app')
+const port = process.env.port || 5000
 
-const app = express()
 
-app.get('/', (req, res) => {
-    res.status(200).json({message: 'server works'})
-
-})
-
-app.listen(5000, () => console.log("server hes been started"))
+app.listen(port, () => console.log(`server hes been started on ${port}`))
